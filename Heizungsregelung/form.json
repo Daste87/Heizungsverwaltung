@@ -1,13 +1,13 @@
 {
     "elements": [
         {
-            "type": "SelectObject",
+            "type": "SelectVariable",
             "name": "Aktor-ID",
             "value": "kein",
             "caption": "Aktor-ID"
         },
         {
-            "type": "SelectObject",
+            "type": "SelectVariable",
             "name": "Temperatur-ID",
             "value": "kein",
             "caption": "Ist-Temperatur"

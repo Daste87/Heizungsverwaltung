@@ -98,14 +98,22 @@
     $this->set_temperature();
 
 
-   # $hallo = $this->ReadPropertyInteger("Temperatur-ID");
 
 
-  #$this->GetValue("Temperatur-ID");
 
 
-    $this->ReadPropertyInteger('Temperatur-ID');
-    SetValue(IPS_GetObjectIDByIdent("IsTemperature", $this->InstanceID), 5);
+
+
+
+            $to = $this->ReadPropertyInteger('Temperatur-ID');
+            $to = GetValue($to);
+            SetValue(IPS_GetObjectIDByIdent('IsTemperature', $this->InstanceID), $to);
+
+
+
+
+
+
 
 
 
