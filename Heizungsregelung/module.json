@@ -1,0 +1,15 @@
+{
+    "id": "{1CFCE738-4B6E-82DA-3821-C33B76F380DB}",
+    "name": "Heizungsverwaltung",
+    "type": 3,
+    "vendor": "",
+    "aliases":
+    [
+        "Heizungsregelung"
+    ],
+    "url": "",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "H"
+}

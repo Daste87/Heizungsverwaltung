@@ -1,0 +1,46 @@
+{
+    "elements": [
+        {
+            "type": "SelectObject",
+            "name": "Aktor-ID",
+            "value": "kein",
+            "caption": "Aktor-ID"
+        },
+        {
+            "type": "SelectObject",
+            "name": "Temperatur-ID",
+            "value": "kein",
+            "caption": "Ist-Temperatur"
+        },
+                {
+            "type": "Select",
+            "name": "DeviceType",
+            "caption": "Modus",
+            "options": [
+            { "caption": "Fremdregelnd", "value": "0" },
+            { "caption": "Selbstregelnd", "value": "1" }
+    ]
+        },
+        {
+            "type": "ValidationTextBox",
+            "name": "Schaltbefehl-An",
+            "value": "0",
+            "caption": "Schaltbefehl-An"
+        },
+        {
+            "type": "ValidationTextBox",
+            "name": "Schaltbefehl-Aus",
+            "value": "0",
+            "caption": "Schaltbefehl-Aus"
+        },
+                {
+            "type": "ValidationTextBox",
+            "name": "Schaltbefehl",
+            "value": "0",
+            "caption": "Schaltbefehl"
+        }
+
+
+             
+    ]
+}
