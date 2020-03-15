@@ -1,6 +1,6 @@
 <?
     // Klassendefinition
-    class Heizungsverwaltung extends IPSModule {
+    class Heizungsregelung extends IPSModule {
  
         // Überschreibt die interne IPS_Create($id) Funktion
         public function Create() {
