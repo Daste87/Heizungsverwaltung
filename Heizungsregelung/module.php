@@ -14,6 +14,7 @@
 
             $this->EnableAction("ShouldTemperature");
             $this->EnableAction("Reduction");
+            
 
             if (@$this->GetIDForIdent("heatingplan") == false) {
                 $heatingplan = IPS_CreateEvent(2);
@@ -96,6 +97,19 @@
     $this->get_heatingplan_status(); //Aufruf Heizplan Rausfinden
     $this->set_temperature();
 
+
+   # $hallo = $this->ReadPropertyInteger("Temperatur-ID");
+
+
+  #$this->GetValue("Temperatur-ID");
+
+
+    $this->ReadPropertyInteger('Temperatur-ID');
+    SetValue(IPS_GetObjectIDByIdent("IsTemperature", $this->InstanceID), 5);
+
+
+
+
       switch ($Ident) {
           case 'ShouldTemperature':
             SetValue(IPS_GetObjectIDByIdent('ShouldTemperature', $this->InstanceID), $Value);
@@ -139,10 +153,10 @@
             $schaltbefehl_aus = $this->ReadPropertyString("Schaltbefehl-Aus");
             $modus = $this->ReadPropertyString("DeviceType");
 
-            #echo $modus;
+
 
             if ($modus == "0" ) {
-            echo "fremd";
+            #echo "fremd";
 
                 switch ($heizphase) {
                     case 0:
@@ -180,7 +194,7 @@
                 }           
            }
            else {
-         echo "selbst";
+         #echo "selbst";
             switch ($heizphase) {
                 case 0:
                     #Execute action "AUS"
