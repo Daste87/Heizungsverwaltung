@@ -32,7 +32,7 @@
             $this->RegisterPropertyString("Schaltbefehl-An", "0");
             $this->RegisterPropertyString("Schaltbefehl-Aus", "0");
             $this->RegisterPropertyString("Schaltbefehl", "0");
-            $this->RegisterPropertyInteger("Temperatur-ID", 0);
+            $this->RegisterPropertyFloat("Temperatur-ID", 0);
             $this->RegisterPropertyString("DeviceType", "0");
 
 
@@ -105,7 +105,7 @@
 
 
 
-            $to = $this->ReadPropertyInteger('Temperatur-ID');
+            $to = $this->ReadPropertyFloat('Temperatur-ID');
             $to = GetValue($to);
             SetValue(IPS_GetObjectIDByIdent('IsTemperature', $this->InstanceID), $to);
 
