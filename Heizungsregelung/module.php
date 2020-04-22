@@ -105,16 +105,6 @@
 
 
 
-            $to = $this->ReadPropertyFloat('Temperatur-ID');
-            $to = GetValue($to);
-            SetValue(IPS_GetObjectIDByIdent('IsTemperature', $this->InstanceID), $to);
-
-
-
-
-
-
-
 
 
 
@@ -159,8 +149,9 @@
             $ist_temperature = $this->GetValue("IsTemperature");
             $schaltbefehl_an = $this->ReadPropertyString("Schaltbefehl-An");
             $schaltbefehl_aus = $this->ReadPropertyString("Schaltbefehl-Aus");
+            $schaltbefehl = $this->ReadPropertyString("Schaltbefehl");
             $modus = $this->ReadPropertyString("DeviceType");
-
+            #echo $schaltbefehl;
 
 
             if ($modus == "0" ) {
@@ -207,22 +198,26 @@
                 case 0:
                     #Execute action "AUS"
                     $schaltbefehl;
+                    #echo $schaltbefehl;
                     break;
                 case 1:
                     #Execute action "FrostSchutz"
                     if ($ist_temperature < 6) {
-                    $schaltbefehl;    
+                    $schaltbefehl;   
+                    #echo $schaltbefehl;
                     }
                     break;
                 case 2:
                     #Execute action "Absenkung"
                     if ($ist_temperature > $soll_temperatur-$soll_absenkung) {
                     $schaltbefehl;
+                    #echo $schaltbefehl;
                     }
                 case 3:
                      #Execute action "Soll-Temperatur"
                     if ($ist_temperature > $soll_temperatur) {
                     $schaltbefehl;
+                    #echo $schaltbefehl;
                     }
                     break;
                 }
